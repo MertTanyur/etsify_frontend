@@ -1,12 +1,26 @@
 <template>
   <div id="app">
-    <div id="nav">
+    <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
+    </div>   -->
+
+    <custom-navbar></custom-navbar>
+
+    <div class="wrapper">
+      <router-view />
     </div>
-    <router-view/>
   </div>
 </template>
+<script>
+import CustomNavbar from "@/components/CustomNavbar.vue";
+
+export default {
+  components: {
+    CustomNavbar,
+  },
+};
+</script>
 
 <style>
 #app {
